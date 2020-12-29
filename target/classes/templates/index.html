@@ -26,7 +26,11 @@
     <input type="text" class="form-control" name="username" th:placeholder="#{username}" placeholder="Username" required="" autofocus="">
     <label class="sr-only" th:text="#{password}">Password</label>
     <input type="password" class="form-control" name="password" th:placeholder="#{password}" placeholder="Password" required="">
-
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"/> [[#{remember}]]
+        </label>
+    </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{signin}">Sign in</button>
     <p class="mt-5 mb-3 text-muted">©2020-2021</p>
     <a class="btn btn-sm" th:href="@{/index.html(lang='zh_CN')}">中文</a>
