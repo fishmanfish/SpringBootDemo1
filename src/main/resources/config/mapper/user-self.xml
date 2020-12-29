@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fishman.fish.springbootdemo01.mapper.UserMapper">
+    <cache flushInterval="60000" readOnly="true" size="512"></cache>
+
+    <resultMap id="userMap" type="User">
+        <id property="userID" column="id"></id>
+        <result property="sname" column="sname"></result>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="empID" column="empID"></result>
+    </resultMap>
+
+    <select id="getUserByID" resultMap="userMap" parameterType="int">
+        select * from user where id=#{userID}
+    </select>
+
+    <select id="checkUser" resultType="string" parameterType="string">
+        select sname from user where username=#{username} and password=#{password}
+    </select>
+
+    <select id="getAll" resultMap="userMap">
+        select * from user
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into user(sname,username,password,empID)values (#{sname},#{username},#{password},#{empID})
+    </insert>
+
+    <update id="updUser" parameterType="User">
+        update user
+        <set>
+            <if test="sname != null and sname != ''">
+                sname=#{sname},
+            </if>
+            <if test="username != null and username != ''">
+                username=#{username},
+            </if>
+            <if test="password != null and password != ''">
+                password=#{password},
+            </if>
+            <if test="empID != null and empID != 0">
+                empID=#{empID}
+            </if>
+        </set>
+        <where>
+            id=#{userID}
+        </where>
+    </update>
+
+    <delete id="delUser" parameterType="int">
+        delete from user
+        <where>
+            id=#{userID}
+        </where>
+    </delete>
+</mapper>

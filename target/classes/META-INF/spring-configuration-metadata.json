@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "demo",
+      "type": "fishman.fish.springbootdemo01.beans.Demo",
+      "sourceType": "fishman.fish.springbootdemo01.beans.Demo"
+    },
+    {
+      "name": "fileup.location",
+      "type": "fishman.fish.springbootdemo01.config.FileType",
+      "sourceType": "fishman.fish.springbootdemo01.config.FileType"
+    }
+  ],
+  "properties": [
+    {
+      "name": "demo.demo-str",
+      "type": "java.lang.String",
+      "sourceType": "fishman.fish.springbootdemo01.beans.Demo"
+    },
+    {
+      "name": "demo.list",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "fishman.fish.springbootdemo01.beans.Demo"
+    },
+    {
+      "name": "demo.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "fishman.fish.springbootdemo01.beans.Demo"
+    },
+    {
+      "name": "fileup.location.absolute-path",
+      "type": "java.lang.String",
+      "sourceType": "fishman.fish.springbootdemo01.config.FileType"
+    },
+    {
+      "name": "fileup.location.file-relative-path",
+      "type": "java.lang.String",
+      "sourceType": "fishman.fish.springbootdemo01.config.FileType"
+    },
+    {
+      "name": "fileup.location.img-relative-path",
+      "type": "java.lang.String",
+      "sourceType": "fishman.fish.springbootdemo01.config.FileType"
+    }
+  ],
+  "hints": []
+}
