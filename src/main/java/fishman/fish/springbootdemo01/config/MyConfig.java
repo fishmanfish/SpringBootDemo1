@@ -48,8 +48,8 @@ public class MyConfig implements WebMvcConfigurer {
   public void addResourceHandlers(ResourceHandlerRegistry registry){
     //获取文件的真实路径
     String path = fileType.getAbsolutePath();
-    registry.addResourceHandler(fileType.getImgRelativePath() + "/**").addResourceLocations("file:" + path);
-    registry.addResourceHandler(fileType.getFileRelativePath() + "/**").addResourceLocations("file:" + path);
+    registry.addResourceHandler(fileType.getImgRelativePath() + "/**").addResourceLocations("file:" + path);  //上传图片的虚拟路径
+    registry.addResourceHandler(fileType.getFileRelativePath() + "/**").addResourceLocations("file:" + path); //上传文件的虚拟路径
   }
 
   @Bean
