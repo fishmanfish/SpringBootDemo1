@@ -1,9 +1,9 @@
 .idea
 
-src/test
+/src/test
 
 #日志文件夹
 log
 
 #图片上传
-src/main/resources/static/uploadfile
+/src/main/resources/static/uploadfile

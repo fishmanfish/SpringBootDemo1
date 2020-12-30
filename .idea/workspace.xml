@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a157aca-8141-4d4b-b12a-63dddd84a376" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fishman/fish/springbootdemo01/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fishman/fish/springbootdemo01/config/MyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fishman/fish/springbootdemo01/controller/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fishman/fish/springbootdemo01/controller/EmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/emp/empinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/emp/empinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fishman/fish/springbootdemo01/config/MyConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fishman/fish/springbootdemo01/config/MyConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fishman/fish/springbootdemo01/controller/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fishman/fish/springbootdemo01/controller/EmpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/emp/empinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/emp/empinfo.html" afterDir="false" />
-    </list>
+    <list default="true" id="0a157aca-8141-4d4b-b12a-63dddd84a376" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +169,7 @@
       <workItem from="1609203559244" duration="23369000" />
       <workItem from="1609232247150" duration="11000" />
       <workItem from="1609232318068" duration="611000" />
-      <workItem from="1609290100747" duration="4751000" />
+      <workItem from="1609290100747" duration="5111000" />
     </task>
     <servers />
   </component>
