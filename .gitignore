@@ -1,3 +1,4 @@
 .idea
 src/test
-/log
+log
+src/main/resources/static/uploadfile

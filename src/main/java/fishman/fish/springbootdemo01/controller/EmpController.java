@@ -58,6 +58,7 @@ public class EmpController {
     Emp emp = empService.getEmpByID(id);
     List<Dept> depts = deptService.getAll();
     logger.info("所有部门信息：" + depts.toString());
+    logger.info("当前编辑的员工信息：" + emp.toString());
     map.put("depts", depts);
     map.put("emp", emp);
     map.put("empImgs", StringUtils.hasLength(emp.getEmpImg()) ? emp.getEmpImg().split(";") : "");

@@ -36,7 +36,7 @@ public class MyConfig implements WebMvcConfigurer {
    */
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(new MyIntercept()).addPathPatterns("/**").excludePathPatterns("", "/", "/index.html", "/user/login","/static/**", "/webjars/**");
+    registry.addInterceptor(new MyIntercept()).addPathPatterns("/**").excludePathPatterns("/", "/index.html", "/user/login","/asserts/**", "/webjars/**");
 
   }
 
@@ -48,7 +48,8 @@ public class MyConfig implements WebMvcConfigurer {
   public void addResourceHandlers(ResourceHandlerRegistry registry){
     //获取文件的真实路径
     String path = fileType.getAbsolutePath();
-    registry.addResourceHandler("/**").addResourceLocations("file:" + path);
+    registry.addResourceHandler(fileType.getImgRelativePath() + "/**").addResourceLocations("file:" + path);
+    registry.addResourceHandler(fileType.getFileRelativePath() + "/**").addResourceLocations("file:" + path);
   }
 
   @Bean

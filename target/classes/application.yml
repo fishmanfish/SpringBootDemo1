@@ -40,6 +40,6 @@ spring:
 #文件上传路径
 fileup:
   location:
-    absolutePath: C:\IDEA_DEMO_project\springboot-demo01\src\main\resources\static\   #相对路径
+    absolutePath: C:\SpringBootDemo1\src\main\resources\static\   #相对路径
     imgRelativePath: /uploadfile/img/
     fileRelativePath: /uploadfile/file/
