@@ -3,6 +3,7 @@ package fishman.fish.springbootdemo01.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.Formatter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -57,5 +58,9 @@ public class MyConfig implements WebMvcConfigurer {
     return new MyLocalResolve();
   }
 
+  @Bean
+  public Formatter formatter(){
+    return new MyFormatter();
+  }
 
 }
