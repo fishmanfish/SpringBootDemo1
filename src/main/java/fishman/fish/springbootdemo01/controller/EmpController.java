@@ -3,6 +3,7 @@ package fishman.fish.springbootdemo01.controller;
 import fishman.fish.springbootdemo01.beans.Dept;
 import fishman.fish.springbootdemo01.beans.Emp;
 import fishman.fish.springbootdemo01.config.FileType;
+import fishman.fish.springbootdemo01.exception.MyException;
 import fishman.fish.springbootdemo01.service.DeptService;
 import fishman.fish.springbootdemo01.service.EmpService;
 import fishman.fish.springbootdemo01.util.StrEncryUtil;
@@ -136,6 +137,9 @@ public class EmpController {
   @GetMapping("/emps")
   public String getAll(HttpSession session){
     List<Emp> emps = empService.getAll();
+    if(emps != null){
+      throw new MyException();
+    }
     logger.info("所有员工信息：" + emps.toString());
     session.setAttribute("emps", emps);
     return "emp/list";

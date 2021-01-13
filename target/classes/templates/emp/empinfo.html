@@ -70,6 +70,7 @@
                 -->
                 <!--<input type="hidden" name="_method" value="put" th:if="${emp != null}"/>-->
                 <input type="hidden" name="token" th:value="${session.token}">
+                <input type="hidden" name="_method" th:if="${emp != null}" value="put">
                 <input type="hidden" name="empID" th:if="${emp != null}" th:value="${emp.empID}">
                 <div class="form-group">
                     <label th:text="#{name}">姓名</label>
