@@ -14,6 +14,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -81,6 +82,27 @@ public class EmpController {
 
   @PostMapping("/saveEmp")
   public String addEmp(Emp emp, String token, HttpSession session){
+    logger.info("表单提交的token：" + token);
+    String tokenSession = (String) session.getAttribute("token");
+    logger.info("session中的token：" + tokenSession);
+    if(tokenSession != null && tokenSession.equals(token)) {
+      if (emp != null) {  //新增
+        if (emp.getEmpID() == 0) {
+          logger.info("新增的员工信息：" + emp.toString());
+          empService.addEmp(emp);
+        } else {//更新
+          logger.info("修改的员工信息：" + emp.toString());
+          empService.updEmp(emp);
+        }
+        session.removeAttribute("token"); //移除token
+      }
+    }
+
+    return "redirect:/emp/emps";
+  }
+
+  @PutMapping("/saveEmp")
+  public String updEmp(Emp emp, String token, HttpSession session){
     logger.info("表单提交的token：" + token);
     String tokenSession = (String) session.getAttribute("token");
     logger.info("session中的token：" + tokenSession);

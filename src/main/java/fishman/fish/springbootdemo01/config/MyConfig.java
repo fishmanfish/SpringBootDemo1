@@ -58,9 +58,9 @@ public class MyConfig implements WebMvcConfigurer {
     return new MyLocalResolve();
   }
 
-  @Bean
+  /*@Bean
   public Formatter formatter(){
     return new MyFormatter();
-  }
+  }*/
 
 }
