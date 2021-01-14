@@ -7,7 +7,6 @@ import fishman.fish.springbootdemo01.exception.MyException;
 import fishman.fish.springbootdemo01.service.DeptService;
 import fishman.fish.springbootdemo01.service.EmpService;
 import fishman.fish.springbootdemo01.util.StrEncryUtil;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package fishman.fish.springbootdemo01.config;
+package fishman.fish.springbootdemo01.intercept;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fishman.fish.springbootdemo01.mapper.EmpMapper">
+    <!--<cache flushInterval="60000" readOnly="true" size="512"></cache>-->
+
+    <resultMap id="empMap" type="Emp">
+        <id property="empID" column="id"></id>
+        <result property="empName" column="empName"></result>
+        <result property="empImg" column="empImg"></result>
+        <result property="deptID" column="deptID"></result>
+        <result property="money" column="money"></result>
+        <result property="gender" column="gender"></result>
+        <association property="dept" javaType="Dept">
+            <id property="deptID" column="id"></id>
+            <result property="deptName" column="deptName"></result>
+        </association>
+    </resultMap>
+
+    <select id="getEmpByID" resultMap="empMap" parameterType="int">
+        select * from emp where id=#{empID}
+    </select>
+
+    <select id="getAll" resultMap="empMap">
+        select * from emp inner join dept on emp.deptID=dept.id
+    </select>
+
+    <insert id="addEmp" parameterType="Emp">
+        insert into emp(empName,deptID,money,gender,empImg)values (#{empName},#{deptID},#{money},#{gender},#{empImg})
+    </insert>
+
+    <update id="updEmp" parameterType="Emp">
+        update emp
+        <set>
+            empName=#{empName},
+            deptID=#{deptID},
+            money=#{money},
+            gender=#{gender},
+            empImg=#{empImg}
+        </set>
+        <where>
+            id=#{empID}
+        </where>
+    </update>
+
+    <delete id="delEmp" parameterType="int">
+        delete from emp
+        <where>
+            id=#{empID}
+        </where>
+    </delete>
+</mapper>

@@ -1,0 +1,45 @@
+server:
+  port: 8000
+
+logging:
+  pattern:
+    console: "曾哥的日志 ===> %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{100} %msg %n"
+
+#mybatis配置
+mybatis:
+  config-location: classpath:config/mybatis-config.xml  #主配置文件路径
+  mapper-locations: classpath:config/mapper/*.xml  #实体类配置文件
+
+#数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC
+    username: root
+    password: 980813
+  thymeleaf:
+    cache: false
+
+  #配置国际化的基础名
+  messages:
+    basename: international.login.index
+
+#排除SpringBoot配置的文件上传组件
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+
+
+  #配置开始文件上传
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB    #所有上传
+      file-size-threshold: 10MB  #单个文件最大
+
+#文件上传路径
+fileup:
+  location:
+    absolutePath: C:\SpringBootDemo1\src\main\resources\static\   #相对路径
+    imgRelativePath: /uploadfile/img/
+    fileRelativePath: /uploadfile/file/
